@@ -61,6 +61,7 @@ sessionRouter.post("/chat", async (req: Request, res: Response) => {
 
 			let first = [];
 
+			first.push({role:"system" , content:systemMsg});
 			first.push({ role: "user", content: msg });
 			first.push({
 				role: "assistant",
